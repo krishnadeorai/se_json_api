@@ -83,6 +83,8 @@ test:
 #
 production:
   <<: *default
-  database: sephora_json_api_production
-  username: sephora_json_api
-  password: <%= ENV['SEPHORA_JSON_API_DATABASE_PASSWORD'] %>
+  host: ec2-184-72-228-128.compute-1.amazonaws.com
+  database: dekbl4gjih7qqs
+  username: upftqvswnvybjo
+  password: bdf80d069d95e8b68a28aee5578cb99baae82cdc268a7bf676dbd9fadc54fc39
+  port: 5432
