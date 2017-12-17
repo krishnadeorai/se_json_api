@@ -1,0 +1,15 @@
+example_id                                     | status | run_time        |
+---------------------------------------------- | ------ | --------------- |
+./spec/acceptance/contacts_spec.rb[1:1:1]      | passed | 0.01218 seconds |
+./spec/acceptance/contacts_spec.rb[1:2:1]      | passed | 0.01928 seconds |
+./spec/acceptance/contacts_spec.rb[1:3:1]      | passed | 0.0114 seconds  |
+./spec/acceptance/contacts_spec.rb[1:4:1]      | passed | 0.01691 seconds |
+./spec/acceptance/contacts_spec.rb[1:5:1]      | passed | 0.04312 seconds |
+./spec/acceptance/contacts_spec.rb[1:6:1]      | passed | 0.02513 seconds |
+./spec/acceptance/contacts_spec.rb[1:7:1]      | passed | 0.02094 seconds |
+./spec/acceptance/contacts_spec.rb[1:8:1]      | passed | 0.02282 seconds |
+./spec/acceptance/contacts_spec.rb[1:9:1]      | passed | 0.02621 seconds |
+./spec/acceptance/contacts_spec.rb[1:10:1]     | passed | 0.02899 seconds |
+./spec/acceptance/phone_numbers_spec.rb[1:1:1] | passed | 0.06892 seconds |
+./spec/acceptance/phone_numbers_spec.rb[1:2:1] | passed | 0.02078 seconds |
+./spec/acceptance/phone_numbers_spec.rb[1:3:1] | passed | 0.02715 seconds |

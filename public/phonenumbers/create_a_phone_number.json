@@ -1,0 +1,58 @@
+{
+  "resource": "PhoneNumbers",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/phone-numbers",
+  "description": "Create a phone_number",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      Should always be set to <strong>phone_number</strong>.\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "name",
+      "description": "      Name of group of which phone number belongs\n"
+    },
+    {
+      "scope": "attributes",
+      "required": true,
+      "name": "mobile",
+      "description": "      Mobile No\n"
+    },
+    {
+      "scope": "relationships",
+      "name": "contact",
+      "description": "      The contacts assigned to the phone_number.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/phone-numbers",
+      "request_body": "{\"data\":{\"type\":\"phone_numbers\",\"attributes\":{\"name\":\"home\",\"mobile\":\"1231231231\"},\"relationships\":{\"contact\":{\"data\":{\"id\":1135,\"type\":\"contacts\"}}}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"164\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/164\"},\"attributes\":{\"name\":\"home\",\"mobile\":\"1231231231\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/164/relationships/contact\",\"related\":\"http://example.org/phone-numbers/164/contact\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

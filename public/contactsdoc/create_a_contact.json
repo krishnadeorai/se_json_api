@@ -1,0 +1,81 @@
+{
+  "resource": "ContactsDoc",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/contacts",
+  "description": "Create a contact",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      Should always be set to <strong>contacts</strong>.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "name-first",
+      "description": "      First Name of person.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "name-last",
+      "description": "      Last Name of person.\n"
+    },
+    {
+      "scope": "attributes",
+      "name": "email",
+      "description": "      Email of person.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "city",
+      "description": "      Current City Of Person.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "state",
+      "description": "      Current State of person.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "country",
+      "description": "      Current Country of person.\n"
+    },
+    {
+      "scope": "relationships",
+      "name": "phone_numbers",
+      "description": "      Phone Number of Person.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/contacts",
+      "request_body": "{\"data\":{\"type\":\"contacts\",\"attributes\":{\"name-first\":\"Test\",\"name-last\":\"last\",\"email\":\"test@gmail.com\",\"city\":\"Nagpur\",\"state\":\"Maharastra\",\"country\":\"India\"}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"1159\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1159\"},\"attributes\":{\"name-first\":\"Test\",\"name-last\":\"last\",\"email\":\"test@gmail.com\",\"city\":\"Nagpur\",\"country\":\"India\",\"state\":\"Maharastra\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1159/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1159/phone-numbers\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

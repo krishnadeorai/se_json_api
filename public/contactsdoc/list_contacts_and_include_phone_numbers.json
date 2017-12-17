@@ -1,0 +1,38 @@
+{
+  "resource": "ContactsDoc",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/contacts?include=phone-numbers",
+  "description": "List contacts and include phone_numbers",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/contacts?include=phone-numbers",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "phone-numbers"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"1\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1\"},\"attributes\":{\"name-first\":\"Krishna Deo\",\"name-last\":\"Rai\",\"email\":\"rai.krishnadeo@gmail.com\",\"city\":\"chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1/phone-numbers\"},\"data\":[{\"type\":\"phone-numbers\",\"id\":\"2\"},{\"type\":\"phone-numbers\",\"id\":\"1\"},{\"type\":\"phone-numbers\",\"id\":\"3\"}]}}},{\"id\":\"2\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/2\"},\"attributes\":{\"name-first\":\"Krishna\",\"name-last\":\"Rai\",\"email\":\"rai.krishnadeo1@gmail.com\",\"city\":\"chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/2/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/2/phone-numbers\"},\"data\":[{\"type\":\"phone-numbers\",\"id\":\"4\"},{\"type\":\"phone-numbers\",\"id\":\"7\"},{\"type\":\"phone-numbers\",\"id\":\"8\"}]}}},{\"id\":\"3\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/3\"},\"attributes\":{\"name-first\":\"Krishna\",\"name-last\":\"D\",\"email\":\"rai.krishnadeo2@gmail.com\",\"city\":\"chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/3/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/3/phone-numbers\"},\"data\":[{\"type\":\"phone-numbers\",\"id\":\"5\"},{\"type\":\"phone-numbers\",\"id\":\"6\"},{\"type\":\"phone-numbers\",\"id\":\"9\"}]}}},{\"id\":\"1138\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1138\"},\"attributes\":{\"name-first\":\"Abhilash\",\"name-last\":\"Gupta\",\"email\":null,\"city\":\"Chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1138/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1138/phone-numbers\"},\"data\":[{\"type\":\"phone-numbers\",\"id\":\"166\"}]}}},{\"id\":\"1139\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1139\"},\"attributes\":{\"name-first\":\"Sachin\",\"name-last\":\"Mishra\",\"email\":null,\"city\":\"Chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1139/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1139/phone-numbers\"},\"data\":[{\"type\":\"phone-numbers\",\"id\":\"167\"}]}}}],\"included\":[{\"id\":\"2\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/2\"},\"attributes\":{\"name\":\"office\",\"mobile\":\"9566167600\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/2/relationships/contact\",\"related\":\"http://example.org/phone-numbers/2/contact\"}}}},{\"id\":\"1\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/1\"},\"attributes\":{\"name\":\"home\",\"mobile\":\"9566167601\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/1/relationships/contact\",\"related\":\"http://example.org/phone-numbers/1/contact\"}}}},{\"id\":\"3\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/3\"},\"attributes\":{\"name\":\"xyz\",\"mobile\":\"9566167127\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/3/relationships/contact\",\"related\":\"http://example.org/phone-numbers/3/contact\"}}}},{\"id\":\"4\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/4\"},\"attributes\":{\"name\":\"xyz\",\"mobile\":\"9566167127\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/4/relationships/contact\",\"related\":\"http://example.org/phone-numbers/4/contact\"}}}},{\"id\":\"7\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/7\"},\"attributes\":{\"name\":\"office\",\"mobile\":\"9566167127\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/7/relationships/contact\",\"related\":\"http://example.org/phone-numbers/7/contact\"}}}},{\"id\":\"8\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/8\"},\"attributes\":{\"name\":\"home\",\"mobile\":\"9566167127\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/8/relationships/contact\",\"related\":\"http://example.org/phone-numbers/8/contact\"}}}},{\"id\":\"5\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/5\"},\"attributes\":{\"name\":\"xyz\",\"mobile\":\"9566167127\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/5/relationships/contact\",\"related\":\"http://example.org/phone-numbers/5/contact\"}}}},{\"id\":\"6\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/6\"},\"attributes\":{\"name\":\"office\",\"mobile\":\"9566167127\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/6/relationships/contact\",\"related\":\"http://example.org/phone-numbers/6/contact\"}}}},{\"id\":\"9\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/9\"},\"attributes\":{\"name\":\"home\",\"mobile\":\"9566167127\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/9/relationships/contact\",\"related\":\"http://example.org/phone-numbers/9/contact\"}}}},{\"id\":\"166\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/166\"},\"attributes\":{\"name\":\"home\",\"mobile\":\"9667167600\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/166/relationships/contact\",\"related\":\"http://example.org/phone-numbers/166/contact\"}}}},{\"id\":\"167\",\"type\":\"phone-numbers\",\"links\":{\"self\":\"http://example.org/phone-numbers/167\"},\"attributes\":{\"name\":\"home\",\"mobile\":\"9667167600\"},\"relationships\":{\"contact\":{\"links\":{\"self\":\"http://example.org/phone-numbers/167/relationships/contact\",\"related\":\"http://example.org/phone-numbers/167/contact\"}}}}],\"links\":{\"first\":\"http://example.org/contacts?include=phone-numbers&page%5Blimit%5D=10&page%5Boffset%5D=0\",\"last\":\"http://example.org/contacts?include=phone-numbers&page%5Blimit%5D=10&page%5Boffset%5D=0\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

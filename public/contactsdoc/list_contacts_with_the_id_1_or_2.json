@@ -1,0 +1,40 @@
+{
+  "resource": "ContactsDoc",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/contacts",
+  "description": "List contacts with the id 1 or 2",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/contacts?filter[id]=1145%2C1146",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "filter": {
+          "id": "1145,1146"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"1145\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1145\"},\"attributes\":{\"name-first\":\"Abhilash\",\"name-last\":\"Gupta\",\"email\":null,\"city\":\"Chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1145/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1145/phone-numbers\"}}}},{\"id\":\"1146\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1146\"},\"attributes\":{\"name-first\":\"Sachin\",\"name-last\":\"Mishra\",\"email\":null,\"city\":\"Chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1146/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1146/phone-numbers\"}}}}],\"links\":{\"first\":\"http://example.org/contacts?filter%5Bid%5D=1145%2C1146&page%5Blimit%5D=10&page%5Boffset%5D=0\",\"last\":\"http://example.org/contacts?filter%5Bid%5D=1145%2C1146&page%5Blimit%5D=10&page%5Boffset%5D=0\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

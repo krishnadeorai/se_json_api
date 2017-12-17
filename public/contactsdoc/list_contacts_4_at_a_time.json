@@ -1,0 +1,40 @@
+{
+  "resource": "ContactsDoc",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "contacts?page[limit]=4",
+  "description": "List contacts 4 at a time",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "contacts?page[limit]=4",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "page": {
+          "limit": "4"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"1\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1\"},\"attributes\":{\"name-first\":\"Krishna Deo\",\"name-last\":\"Rai\",\"email\":\"rai.krishnadeo@gmail.com\",\"city\":\"chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1/phone-numbers\"}}}},{\"id\":\"2\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/2\"},\"attributes\":{\"name-first\":\"Krishna\",\"name-last\":\"Rai\",\"email\":\"rai.krishnadeo1@gmail.com\",\"city\":\"chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/2/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/2/phone-numbers\"}}}},{\"id\":\"3\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/3\"},\"attributes\":{\"name-first\":\"Krishna\",\"name-last\":\"D\",\"email\":\"rai.krishnadeo2@gmail.com\",\"city\":\"chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/3/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/3/phone-numbers\"}}}},{\"id\":\"1140\",\"type\":\"contacts\",\"links\":{\"self\":\"http://example.org/contacts/1140\"},\"attributes\":{\"name-first\":\"Abhilash 0\",\"name-last\":\"Gupta 0\",\"email\":null,\"city\":\"Chennai\",\"country\":\"India\",\"state\":\"Tamil Naidu\"},\"relationships\":{\"phone-numbers\":{\"links\":{\"self\":\"http://example.org/contacts/1140/relationships/phone-numbers\",\"related\":\"http://example.org/contacts/1140/phone-numbers\"}}}}],\"links\":{\"first\":\"http://example.org/contacts?page%5Blimit%5D=4&page%5Boffset%5D=0\",\"next\":\"http://example.org/contacts?page%5Blimit%5D=4&page%5Boffset%5D=4\",\"last\":\"http://example.org/contacts?page%5Blimit%5D=4&page%5Boffset%5D=4\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

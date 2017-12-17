@@ -1,0 +1,107 @@
+{
+  "resources": [
+    {
+      "name": "ContactsDoc",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create a contact",
+          "link": "contactsdoc/create_a_contact.json",
+          "groups": "all",
+          "route": "/contacts",
+          "method": "post"
+        },
+        {
+          "description": "Create a contact and receive an error",
+          "link": "contactsdoc/create_a_contact_and_receive_an_error.json",
+          "groups": "all",
+          "route": "/contacts",
+          "method": "post"
+        },
+        {
+          "description": "Get a contact",
+          "link": "contactsdoc/get_a_contact.json",
+          "groups": "all",
+          "route": "/contacts/:id",
+          "method": "get"
+        },
+        {
+          "description": "List contacts",
+          "link": "contactsdoc/list_contacts.json",
+          "groups": "all",
+          "route": "/contacts",
+          "method": "get"
+        },
+        {
+          "description": "List contacts 4 at a time",
+          "link": "contactsdoc/list_contacts_4_at_a_time.json",
+          "groups": "all",
+          "route": "contacts?page[limit]=4",
+          "method": "get"
+        },
+        {
+          "description": "List contacts and include phone_numbers",
+          "link": "contactsdoc/list_contacts_and_include_phone_numbers.json",
+          "groups": "all",
+          "route": "/contacts?include=phone-numbers",
+          "method": "get"
+        },
+        {
+          "description": "List contacts and only fetch the city attribute",
+          "link": "contactsdoc/list_contacts_and_only_fetch_the_city_attribute.json",
+          "groups": "all",
+          "route": "/contacts?fields[contacts]=city",
+          "method": "get"
+        },
+        {
+          "description": "List contacts and sort by name_first ascending",
+          "link": "contactsdoc/list_contacts_and_sort_by_name_first_ascending.json",
+          "groups": "all",
+          "route": "/contacts?sort=name_first",
+          "method": "get"
+        },
+        {
+          "description": "List contacts with the id 1 or 2",
+          "link": "contactsdoc/list_contacts_with_the_id_1_or_2.json",
+          "groups": "all",
+          "route": "/contacts",
+          "method": "get"
+        },
+        {
+          "description": "List the second page of contacts",
+          "link": "contactsdoc/list_the_second_page_of_contacts.json",
+          "groups": "all",
+          "route": "contacts?page[offset]=4",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "PhoneNumbers",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create a phone_number",
+          "link": "phonenumbers/create_a_phone_number.json",
+          "groups": "all",
+          "route": "/phone-numbers",
+          "method": "post"
+        },
+        {
+          "description": "Get a phone_number",
+          "link": "phonenumbers/get_a_phone_number.json",
+          "groups": "all",
+          "route": "/phone-numbers/:id",
+          "method": "get"
+        },
+        {
+          "description": "List phone_numbers",
+          "link": "phonenumbers/list_phone_numbers.json",
+          "groups": "all",
+          "route": "/phone-numbers",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}
