@@ -5,7 +5,7 @@ require 'rspec_api_documentation/dsl'
 RspecApiDocumentation.configure do |config|
   config.format = [:json, :combined_text, :html]
 
-  config.docs_dir = Rails.root.join("docs")
+  config.docs_dir = Rails.root.join("public/docs")
 
   #config.request_headers_to_include = ["Content-Type", "Authorization"]
 
