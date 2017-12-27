@@ -1,0 +1,160 @@
+List products
+-------------
+
+Request:
+  GET /products
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"1","type":"products","links":{"self":"http://example.org/products/1"},"attributes":{"name":"Sugar Lip Treatment Advance Therapy Tool","category":"Tool","sold-out":false,"under-sale":true,"price":4000,"sale-price":2000,"sale-text":"50% OFF"}},{"id":"2","type":"products","links":{"self":"http://example.org/products/2"},"attributes":{"name":"Sephora Favourites Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2600,"sale-price":1300,"sale-text":"50% OFF"}},{"id":"3","type":"products","links":{"self":"http://example.org/products/3"},"attributes":{"name":"Tarte Tool collection Tool","category":"Tool","sold-out":false,"under-sale":true,"price":1600,"sale-price":800,"sale-text":"50% OFF"}},{"id":"4","type":"products","links":{"self":"http://example.org/products/4"},"attributes":{"name":"Holographic Powder Quad Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2800,"sale-price":900,"sale-text":"50% OFF"}},{"id":"5","type":"products","links":{"self":"http://example.org/products/5"},"attributes":{"name":"Photo strip highlighting palette Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2000,"sale-price":1000,"sale-text":"50% OFF"}},{"id":"6","type":"products","links":{"self":"http://example.org/products/6"},"attributes":{"name":"Glitter Glaze Quad Tool","category":"Tool","sold-out":false,"under-sale":true,"price":5000,"sale-price":2500,"sale-text":"50% OFF"}},{"id":"7","type":"products","links":{"self":"http://example.org/products/7"},"attributes":{"name":"Be Legendary Lipstick Minis Tool","category":"Tool","sold-out":false,"under-sale":true,"price":4400,"sale-price":2200,"sale-text":"50% OFF"}},{"id":"8","type":"products","links":{"self":"http://example.org/products/8"},"attributes":{"name":"Heavy Metals Metallic Eyeshadow Palette Tool","category":"Tool","sold-out":false,"under-sale":true,"price":4400,"sale-price":2200,"sale-text":"50% OFF"}},{"id":"39","type":"products","links":{"self":"http://example.org/products/39"},"attributes":{"name":"Glitter Glaze Quad Tool","category":"Tool","sold-out":false,"under-sale":true,"price":5000,"sale-price":2500,"sale-text":"50% OFF"}},{"id":"40","type":"products","links":{"self":"http://example.org/products/40"},"attributes":{"name":"Test","category":"Makeup","sold-out":false,"under-sale":true,"price":1000,"sale-price":500,"sale-text":"50% Off"}}],"meta":{"record-count":11},"links":{"first":"http://example.org/products?page%5Blimit%5D=10&page%5Boffset%5D=0","next":"http://example.org/products?page%5Blimit%5D=10&page%5Boffset%5D=10","last":"http://example.org/products?page%5Blimit%5D=10&page%5Boffset%5D=1"}}
+
+
+List products and sort by price ascending
+-----------------------------------------
+
+Request:
+  GET /products?sort=price
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+  sort=price
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"42","type":"products","links":{"self":"http://example.org/products/42"},"attributes":{"name":"Test","category":"Makeup","sold-out":false,"under-sale":true,"price":1000,"sale-price":500,"sale-text":"50% Off"}},{"id":"3","type":"products","links":{"self":"http://example.org/products/3"},"attributes":{"name":"Tarte Tool collection Tool","category":"Tool","sold-out":false,"under-sale":true,"price":1600,"sale-price":800,"sale-text":"50% OFF"}},{"id":"5","type":"products","links":{"self":"http://example.org/products/5"},"attributes":{"name":"Photo strip highlighting palette Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2000,"sale-price":1000,"sale-text":"50% OFF"}},{"id":"2","type":"products","links":{"self":"http://example.org/products/2"},"attributes":{"name":"Sephora Favourites Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2600,"sale-price":1300,"sale-text":"50% OFF"}},{"id":"4","type":"products","links":{"self":"http://example.org/products/4"},"attributes":{"name":"Holographic Powder Quad Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2800,"sale-price":900,"sale-text":"50% OFF"}},{"id":"1","type":"products","links":{"self":"http://example.org/products/1"},"attributes":{"name":"Sugar Lip Treatment Advance Therapy Tool","category":"Tool","sold-out":false,"under-sale":true,"price":4000,"sale-price":2000,"sale-text":"50% OFF"}},{"id":"7","type":"products","links":{"self":"http://example.org/products/7"},"attributes":{"name":"Be Legendary Lipstick Minis Tool","category":"Tool","sold-out":false,"under-sale":true,"price":4400,"sale-price":2200,"sale-text":"50% OFF"}},{"id":"8","type":"products","links":{"self":"http://example.org/products/8"},"attributes":{"name":"Heavy Metals Metallic Eyeshadow Palette Tool","category":"Tool","sold-out":false,"under-sale":true,"price":4400,"sale-price":2200,"sale-text":"50% OFF"}},{"id":"39","type":"products","links":{"self":"http://example.org/products/39"},"attributes":{"name":"Glitter Glaze Quad Tool","category":"Tool","sold-out":false,"under-sale":true,"price":5000,"sale-price":2500,"sale-text":"50% OFF"}},{"id":"6","type":"products","links":{"self":"http://example.org/products/6"},"attributes":{"name":"Glitter Glaze Quad Tool","category":"Tool","sold-out":false,"under-sale":true,"price":5000,"sale-price":2500,"sale-text":"50% OFF"}}],"meta":{"record-count":10},"links":{"first":"http://example.org/products?page%5Blimit%5D=10&page%5Boffset%5D=0&sort=price","last":"http://example.org/products?page%5Blimit%5D=10&page%5Boffset%5D=0&sort=price"}}
+
+
+List products 4 at a time
+-------------------------
+
+Request:
+  GET products?page[limit]=4
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+  page={"limit"=>"4"}
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"1","type":"products","links":{"self":"http://example.org/products/1"},"attributes":{"name":"Sugar Lip Treatment Advance Therapy Tool","category":"Tool","sold-out":false,"under-sale":true,"price":4000,"sale-price":2000,"sale-text":"50% OFF"}},{"id":"2","type":"products","links":{"self":"http://example.org/products/2"},"attributes":{"name":"Sephora Favourites Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2600,"sale-price":1300,"sale-text":"50% OFF"}},{"id":"3","type":"products","links":{"self":"http://example.org/products/3"},"attributes":{"name":"Tarte Tool collection Tool","category":"Tool","sold-out":false,"under-sale":true,"price":1600,"sale-price":800,"sale-text":"50% OFF"}},{"id":"4","type":"products","links":{"self":"http://example.org/products/4"},"attributes":{"name":"Holographic Powder Quad Tool","category":"Tool","sold-out":false,"under-sale":true,"price":2800,"sale-price":900,"sale-text":"50% OFF"}}],"meta":{"record-count":14},"links":{"first":"http://example.org/products?page%5Blimit%5D=4&page%5Boffset%5D=0","next":"http://example.org/products?page%5Blimit%5D=4&page%5Boffset%5D=4","last":"http://example.org/products?page%5Blimit%5D=4&page%5Boffset%5D=10"}}
+
+
+Create a product and receive an error
+-------------------------------------
+
+Parameters:
+  * type -       Should always be set to <strong>products</strong>.
+
+  * name -       Name of product.
+
+  * category -       Category of product.
+
+  * sold-out -       Product is out of stock or not. Enter value as 0 or 1. 0 means product is available and 1 means product is not available.
+
+  * price -       Price of product.
+
+  * under-sale -       Product is under sale or not. Enter value as 0 or 1. 0 means product is not under sale and 1 means product is under sale. 
+
+  * sale-price -       Selling Price of product. Required when under-sale value is 1.
+
+  * sale-text -       Offer on product. Required when under-sale value is 1.
+
+
+Request:
+  POST /products
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+  {"data":{"type":"products","attributes":{"name":null,"category":null,"sold-out":null,"under-sale":null}}}
+
+Response:
+  Status: 422 Unprocessable Entity
+  Content-Type: application/vnd.api+json
+
+  {"errors":[{"title":"can't be blank","detail":"name - can't be blank","code":"100","source":{"pointer":"/data/attributes/name"},"status":"422"},{"title":"can't be blank","detail":"category - can't be blank","code":"100","source":{"pointer":"/data/attributes/category"},"status":"422"},{"title":"is not included in the list","detail":"sold-out - is not included in the list","code":"100","source":{"pointer":"/data/attributes/sold-out"},"status":"422"},{"title":"is not included in the list","detail":"under-sale - is not included in the list","code":"100","source":{"pointer":"/data/attributes/under-sale"},"status":"422"},{"title":"Price should be greater than 0","detail":"price - Price should be greater than 0","code":"100","source":{"pointer":"/data/attributes/price"},"status":"422"}]}
+
+
+Get a product
+-------------
+
+Parameters:
+  * id -       ID of the product to be retrieved.
+
+
+Request:
+  GET /products/48
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"48","type":"products","links":{"self":"http://example.org/products/48"},"attributes":{"name":"MyString","category":"MyString","sold-out":false,"under-sale":true,"price":10,"sale-price":5,"sale-text":"MyString"}}}
+
+
+Create a product
+----------------
+
+Parameters:
+  * type -       Should always be set to <strong>products</strong>.
+
+  * name -       Name of product.
+
+  * category -       Category of product.
+
+  * sold-out -       Product is out of stock or not. Enter value as 0 or 1. 0 means product is available and 1 means product is not available.
+
+  * price -       Price of product.
+
+  * under-sale -       Product is under sale or not. Enter value as 0 or 1. 0 means product is not under sale and 1 means product is under sale. 
+
+  * sale-price -       Selling Price of product. Required when under-sale value is 1.
+
+  * sale-text -       Offer on product. Required when under-sale value is 1.
+
+
+Request:
+  POST /products
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+  {"data":{"type":"products","attributes":{"name":"Test","category":"Makeup","sold-out":0,"price":1000,"under-sale":1,"sale-price":500,"sale-text":"50% Off"}}}
+
+Response:
+  Status: 201 Created
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"49","type":"products","links":{"self":"http://example.org/products/49"},"attributes":{"name":"Test","category":"Makeup","sold-out":false,"under-sale":true,"price":1000,"sale-price":500,"sale-text":"50% Off"}}}
+
+
+List products and only fetch the category attribute
+---------------------------------------------------
+
+Request:
+  GET /products?fields[products]=category
+  Content-Type: application/vnd.api+json
+  Cookie: 
+  Host: example.org
+
+  fields={"products"=>"category"}
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"1","type":"products","links":{"self":"http://example.org/products/1"},"attributes":{"category":"Tool"}},{"id":"2","type":"products","links":{"self":"http://example.org/products/2"},"attributes":{"category":"Tool"}},{"id":"3","type":"products","links":{"self":"http://example.org/products/3"},"attributes":{"category":"Tool"}},{"id":"4","type":"products","links":{"self":"http://example.org/products/4"},"attributes":{"category":"Tool"}},{"id":"5","type":"products","links":{"self":"http://example.org/products/5"},"attributes":{"category":"Tool"}},{"id":"6","type":"products","links":{"self":"http://example.org/products/6"},"attributes":{"category":"Tool"}},{"id":"7","type":"products","links":{"self":"http://example.org/products/7"},"attributes":{"category":"Tool"}},{"id":"8","type":"products","links":{"self":"http://example.org/products/8"},"attributes":{"category":"Tool"}},{"id":"39","type":"products","links":{"self":"http://example.org/products/39"},"attributes":{"category":"Tool"}},{"id":"50","type":"products","links":{"self":"http://example.org/products/50"},"attributes":{"category":"Makeup"}}],"meta":{"record-count":10},"links":{"first":"http://example.org/products?fields%5Bproducts%5D=category&page%5Blimit%5D=10&page%5Boffset%5D=0","last":"http://example.org/products?fields%5Bproducts%5D=category&page%5Blimit%5D=10&page%5Boffset%5D=0"}}

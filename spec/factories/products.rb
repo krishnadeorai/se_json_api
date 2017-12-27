@@ -1,11 +1,11 @@
 FactoryGirl.define do
   factory :product do
     name "MyString"
-    sold_out false
+    sold_out 0
     category "MyString"
-    under_sale false
-    price 1
-    sale_price 1
+    under_sale 1
+    price 10
+    sale_price 5
     sale_text "MyString"
   end
 end

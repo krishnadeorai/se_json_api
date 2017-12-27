@@ -1,0 +1,41 @@
+{
+  "resource": "ProductsApiDoc",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/products/:id",
+  "description": "Get a product",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "      ID of the product to be retrieved.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/products/48",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":\"48\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/48\"},\"attributes\":{\"name\":\"MyString\",\"category\":\"MyString\",\"sold-out\":false,\"under-sale\":true,\"price\":10,\"sale-price\":5,\"sale-text\":\"MyString\"}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

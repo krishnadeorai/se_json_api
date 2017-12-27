@@ -1,0 +1,38 @@
+{
+  "resource": "ProductsApiDoc",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/products?sort=price",
+  "description": "List products and sort by price ascending",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/products?sort=price",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "sort": "price"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"42\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/42\"},\"attributes\":{\"name\":\"Test\",\"category\":\"Makeup\",\"sold-out\":false,\"under-sale\":true,\"price\":1000,\"sale-price\":500,\"sale-text\":\"50% Off\"}},{\"id\":\"3\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/3\"},\"attributes\":{\"name\":\"Tarte Tool collection Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":1600,\"sale-price\":800,\"sale-text\":\"50% OFF\"}},{\"id\":\"5\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/5\"},\"attributes\":{\"name\":\"Photo strip highlighting palette Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":2000,\"sale-price\":1000,\"sale-text\":\"50% OFF\"}},{\"id\":\"2\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/2\"},\"attributes\":{\"name\":\"Sephora Favourites Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":2600,\"sale-price\":1300,\"sale-text\":\"50% OFF\"}},{\"id\":\"4\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/4\"},\"attributes\":{\"name\":\"Holographic Powder Quad Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":2800,\"sale-price\":900,\"sale-text\":\"50% OFF\"}},{\"id\":\"1\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/1\"},\"attributes\":{\"name\":\"Sugar Lip Treatment Advance Therapy Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":4000,\"sale-price\":2000,\"sale-text\":\"50% OFF\"}},{\"id\":\"7\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/7\"},\"attributes\":{\"name\":\"Be Legendary Lipstick Minis Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":4400,\"sale-price\":2200,\"sale-text\":\"50% OFF\"}},{\"id\":\"8\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/8\"},\"attributes\":{\"name\":\"Heavy Metals Metallic Eyeshadow Palette Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":4400,\"sale-price\":2200,\"sale-text\":\"50% OFF\"}},{\"id\":\"39\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/39\"},\"attributes\":{\"name\":\"Glitter Glaze Quad Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":5000,\"sale-price\":2500,\"sale-text\":\"50% OFF\"}},{\"id\":\"6\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/6\"},\"attributes\":{\"name\":\"Glitter Glaze Quad Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":5000,\"sale-price\":2500,\"sale-text\":\"50% OFF\"}}],\"meta\":{\"record-count\":10},\"links\":{\"first\":\"http://example.org/products?page%5Blimit%5D=10&page%5Boffset%5D=0&sort=price\",\"last\":\"http://example.org/products?page%5Blimit%5D=10&page%5Boffset%5D=0&sort=price\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

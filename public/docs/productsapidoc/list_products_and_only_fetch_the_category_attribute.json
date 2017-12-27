@@ -1,0 +1,40 @@
+{
+  "resource": "ProductsApiDoc",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/products?fields[products]=category",
+  "description": "List products and only fetch the category attribute",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/products?fields[products]=category",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "fields": {
+          "products": "category"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"1\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/1\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"2\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/2\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"3\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/3\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"4\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/4\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"5\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/5\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"6\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/6\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"7\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/7\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"8\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/8\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"39\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/39\"},\"attributes\":{\"category\":\"Tool\"}},{\"id\":\"50\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/50\"},\"attributes\":{\"category\":\"Makeup\"}}],\"meta\":{\"record-count\":10},\"links\":{\"first\":\"http://example.org/products?fields%5Bproducts%5D=category&page%5Blimit%5D=10&page%5Boffset%5D=0\",\"last\":\"http://example.org/products?fields%5Bproducts%5D=category&page%5Blimit%5D=10&page%5Boffset%5D=0\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

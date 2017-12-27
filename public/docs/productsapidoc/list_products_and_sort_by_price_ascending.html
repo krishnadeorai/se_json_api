@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProductsApiDoc API</title>
+    <meta charset="utf-8">
+    <style>
+      
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+}
+
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 18px;
+  line-height: 18px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+td.required .name:after {
+  float: right;
+  content: "required";
+  font-weight: normal;
+  color: #F08080;
+}
+
+a{
+  color: #0069d6;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #404040;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h3{
+  font-size: 18px;
+  line-height: 36px;
+}
+h4 {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+table{
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  font-size: 13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+table th+th, table td+td {
+  border-left: 1px solid #ddd;
+}
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ProductsApiDoc API</h1>
+
+      <div class="article">
+        <h2>List products and sort by price ascending</h2>
+        <h3>GET /products?sort=price</h3>
+
+
+
+          <h3>Request</h3>
+
+            <h4>Headers</h4>
+            <pre class="request headers">Content-Type: application/vnd.api+json
+Host: example.org
+Cookie: </pre>
+
+          <h4>Route</h4>
+          <pre class="request route highlight">GET /products?sort=price</pre>
+
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">sort: price</pre>
+
+
+
+            <h3>Response</h3>
+              <h4>Headers</h4>
+              <pre class="response headers">Content-Type: application/vnd.api+json</pre>
+            <h4>Status</h4>
+            <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{&quot;data&quot;:[{&quot;id&quot;:&quot;42&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/42&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Test&quot;,&quot;category&quot;:&quot;Makeup&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:1000,&quot;sale-price&quot;:500,&quot;sale-text&quot;:&quot;50% Off&quot;}},{&quot;id&quot;:&quot;3&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/3&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Tarte Tool collection Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:1600,&quot;sale-price&quot;:800,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;5&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/5&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Photo strip highlighting palette Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:2000,&quot;sale-price&quot;:1000,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;2&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/2&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Sephora Favourites Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:2600,&quot;sale-price&quot;:1300,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;4&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/4&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Holographic Powder Quad Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:2800,&quot;sale-price&quot;:900,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;1&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/1&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Sugar Lip Treatment Advance Therapy Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:4000,&quot;sale-price&quot;:2000,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;7&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/7&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Be Legendary Lipstick Minis Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:4400,&quot;sale-price&quot;:2200,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;8&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/8&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Heavy Metals Metallic Eyeshadow Palette Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:4400,&quot;sale-price&quot;:2200,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;39&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/39&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Glitter Glaze Quad Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:5000,&quot;sale-price&quot;:2500,&quot;sale-text&quot;:&quot;50% OFF&quot;}},{&quot;id&quot;:&quot;6&quot;,&quot;type&quot;:&quot;products&quot;,&quot;links&quot;:{&quot;self&quot;:&quot;http://example.org/products/6&quot;},&quot;attributes&quot;:{&quot;name&quot;:&quot;Glitter Glaze Quad Tool&quot;,&quot;category&quot;:&quot;Tool&quot;,&quot;sold-out&quot;:false,&quot;under-sale&quot;:true,&quot;price&quot;:5000,&quot;sale-price&quot;:2500,&quot;sale-text&quot;:&quot;50% OFF&quot;}}],&quot;meta&quot;:{&quot;record-count&quot;:10},&quot;links&quot;:{&quot;first&quot;:&quot;http://example.org/products?page%5Blimit%5D=10&amp;page%5Boffset%5D=0&amp;sort=price&quot;,&quot;last&quot;:&quot;http://example.org/products?page%5Blimit%5D=10&amp;page%5Boffset%5D=0&amp;sort=price&quot;}}</pre>
+      </div>
+    </div>
+  </body>
+</html>

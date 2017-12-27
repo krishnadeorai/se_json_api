@@ -1,0 +1,40 @@
+{
+  "resource": "ProductsApiDoc",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "products?page[limit]=4",
+  "description": "List products 4 at a time",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "products?page[limit]=4",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "page": {
+          "limit": "4"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"1\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/1\"},\"attributes\":{\"name\":\"Sugar Lip Treatment Advance Therapy Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":4000,\"sale-price\":2000,\"sale-text\":\"50% OFF\"}},{\"id\":\"2\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/2\"},\"attributes\":{\"name\":\"Sephora Favourites Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":2600,\"sale-price\":1300,\"sale-text\":\"50% OFF\"}},{\"id\":\"3\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/3\"},\"attributes\":{\"name\":\"Tarte Tool collection Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":1600,\"sale-price\":800,\"sale-text\":\"50% OFF\"}},{\"id\":\"4\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/4\"},\"attributes\":{\"name\":\"Holographic Powder Quad Tool\",\"category\":\"Tool\",\"sold-out\":false,\"under-sale\":true,\"price\":2800,\"sale-price\":900,\"sale-text\":\"50% OFF\"}}],\"meta\":{\"record-count\":14},\"links\":{\"first\":\"http://example.org/products?page%5Blimit%5D=4&page%5Boffset%5D=0\",\"next\":\"http://example.org/products?page%5Blimit%5D=4&page%5Boffset%5D=4\",\"last\":\"http://example.org/products?page%5Blimit%5D=4&page%5Boffset%5D=10\"}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

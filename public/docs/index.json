@@ -1,0 +1,59 @@
+{
+  "resources": [
+    {
+      "name": "ProductsApiDoc",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create a product",
+          "link": "productsapidoc/create_a_product.json",
+          "groups": "all",
+          "route": "/products",
+          "method": "post"
+        },
+        {
+          "description": "Create a product and receive an error",
+          "link": "productsapidoc/create_a_product_and_receive_an_error.json",
+          "groups": "all",
+          "route": "/products",
+          "method": "post"
+        },
+        {
+          "description": "Get a product",
+          "link": "productsapidoc/get_a_product.json",
+          "groups": "all",
+          "route": "/products/:id",
+          "method": "get"
+        },
+        {
+          "description": "List products",
+          "link": "productsapidoc/list_products.json",
+          "groups": "all",
+          "route": "/products",
+          "method": "get"
+        },
+        {
+          "description": "List products 4 at a time",
+          "link": "productsapidoc/list_products_4_at_a_time.json",
+          "groups": "all",
+          "route": "products?page[limit]=4",
+          "method": "get"
+        },
+        {
+          "description": "List products and only fetch the category attribute",
+          "link": "productsapidoc/list_products_and_only_fetch_the_category_attribute.json",
+          "groups": "all",
+          "route": "/products?fields[products]=category",
+          "method": "get"
+        },
+        {
+          "description": "List products and sort by price ascending",
+          "link": "productsapidoc/list_products_and_sort_by_price_ascending.json",
+          "groups": "all",
+          "route": "/products?sort=price",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

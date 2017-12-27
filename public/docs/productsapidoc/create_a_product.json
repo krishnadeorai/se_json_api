@@ -1,0 +1,80 @@
+{
+  "resource": "ProductsApiDoc",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/products",
+  "description": "Create a product",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      Should always be set to <strong>products</strong>.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "name",
+      "description": "      Name of product.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "category",
+      "description": "      Category of product.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "sold-out",
+      "description": "      Product is out of stock or not. Enter value as 0 or 1. 0 means product is available and 1 means product is not available.\n"
+    },
+    {
+      "scope": "attributes",
+      "require": true,
+      "name": "price",
+      "description": "      Price of product.\n"
+    },
+    {
+      "scope": "attributes",
+      "name": "under-sale",
+      "description": "      Product is under sale or not. Enter value as 0 or 1. 0 means product is not under sale and 1 means product is under sale. \n"
+    },
+    {
+      "scope": "attributes",
+      "name": "sale-price",
+      "description": "      Selling Price of product. Required when under-sale value is 1.\n"
+    },
+    {
+      "scope": "attributes",
+      "name": "sale-text",
+      "description": "      Offer on product. Required when under-sale value is 1.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/products",
+      "request_body": "{\"data\":{\"type\":\"products\",\"attributes\":{\"name\":\"Test\",\"category\":\"Makeup\",\"sold-out\":0,\"price\":1000,\"under-sale\":1,\"sale-price\":500,\"sale-text\":\"50% Off\"}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"49\",\"type\":\"products\",\"links\":{\"self\":\"http://example.org/products/49\"},\"attributes\":{\"name\":\"Test\",\"category\":\"Makeup\",\"sold-out\":false,\"under-sale\":true,\"price\":1000,\"sale-price\":500,\"sale-text\":\"50% Off\"}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}
